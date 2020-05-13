@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class FirstC extends React {
+class FirstC extends Component {
     render() {
       return  <div>
                 <h2>First Component</h2>

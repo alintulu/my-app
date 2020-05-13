@@ -1,28 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import FirstC from './components/FirstC.js';
+import Header from './components/Header';
+import DashboardContainer from './container/DashboardContainer'
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Lets Go
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <FirstC />
-        </header>
-        <FirstC />
+      <div>
+        <Header/>
+        <div className="Content">
+          <Switch>
+            <Route exact path="/" component={DashboardContainer}/>
+          </Switch>
+        </div>
       </div>
     );
   }
