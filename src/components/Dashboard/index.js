@@ -6,7 +6,6 @@ import logo from '../../cms-logo.png';
 const Dashboard = ({details, demo}) => {
   return (
     <div className="Home">
-      <div className="Background" style={{backgroundImage: 'url("./plants.jpg")' }}></div>
       <div className="Home-text">
         <img src={logo} className="App-logo" alt="logo" />
         <ScreenHeader id="home-header" title="Service for CMSSW Docker image building"/>
