@@ -19,7 +19,7 @@ class EditableGallery extends Component {
   render() {
     const {elements} = this.props;
     const {search} = this.state;
-    const filteredElements = {elements}.elements.students.filter(element => element.name.toLowerCase().includes(search));
+    const filteredElements = {elements}.elements.images.filter(element => element.name.toLowerCase().includes(search));
     console.log("Hey look here", {filteredElements})
     return (
       <div>
