@@ -3,9 +3,10 @@ import Dashboard from '../components/Dashboard'
 
 const mapStateToProps = (state) => {
   return {
-    details: state.details
-  }
-}
+    details: 0,
+    demo: state.demo
+  };
+};
 
 const DashboardContainer = connect(
   mapStateToProps,

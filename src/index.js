@@ -8,11 +8,45 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { combineReducers } from 'redux'
 
-const initialState = {
-  details: 0
+const elements = {
+  students: [
+     { id: 1, name: 'Wasif', age: 21, email: 'wasif@email.com' },
+     { id: 2, name: 'Ali', age: 19, email: 'ali@email.com' },
+     { id: 3, name: 'Saad', age: 16, email: 'saad@email.com' },
+     { id: 4, name: 'Asad', age: 25, email: 'asad@email.com' }
+  ]
 }
 
-const store = createStore(combineReducers({}), initialState);
+const details = {
+  test: [
+    { id: 1, name: 'test1'}
+  ]
+
+}
+
+const initialState = {
+  details: details,
+  elements: elements
+}
+
+const defaultState = {
+  id: 1, name: '', age: undefined, email: 'undefined@email.com' 
+}
+
+const myReducer = (state = elements, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+const store = createStore(
+  combineReducers({
+    demo: myReducer
+  })
+);
+
+console.log("Reducer is", store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
