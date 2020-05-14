@@ -21,3 +21,9 @@
     filter: brightness(30%);
     -webkit-filter: brightness(30%);
   }
+
+  .App-logo {
+    padding-top: 100px;
+    height: 400px;
+    width: 300px;
+  }

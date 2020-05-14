@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import DashboardContainer from './container/DashboardContainer'
 import SecondPageContainer from './container/SecondPageContainer'
 import ThirdPageContainer from './container/ThirdPageContainer'
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path="/page-three" component={ThirdPageContainer}/>
           </Switch>
         </div>
+        <Footer/>
       </div>
     );
   }

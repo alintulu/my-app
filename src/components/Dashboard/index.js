@@ -1,14 +1,15 @@
 import React from 'react';
 import ScreenHeader from '../ScreenHeader';
 import './Dashboard.css';
+import logo from '../../cms-logo.png';
 
 const Dashboard = ({details, demo}) => {
-  console.log("Reducer two is", {demo});
   return (
     <div className="Home">
       <div className="Background" style={{backgroundImage: 'url("./plants.jpg")' }}></div>
       <div className="Home-text">
-        <ScreenHeader id="home-header" title="CMS-CLOUD CMSSW-Build-Service"/>
+        <img src={logo} className="App-logo" alt="logo" />
+        <ScreenHeader id="home-header" title="Service for CMSSW Docker image building"/>
         <p>Build your CMS docker images!</p>
       </div>
     </div>
