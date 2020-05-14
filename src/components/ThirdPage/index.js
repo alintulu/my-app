@@ -11,6 +11,7 @@ const ThirdPage = ({demo}) => {
 
     return (
         <div className="Home">
+            <div className="Background"></div>
             <div className="Home-text">
             <ScreenHeader id="home-header" title="Find your image"/>
             <Gallery elements={demo}/>

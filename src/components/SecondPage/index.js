@@ -7,6 +7,7 @@ const SecondPage = ({demo}) => {
     console.log("Reducer three is", {demo});
     return (
         <div className="Home">
+            <div className="Background"></div>
             <div className="Home-text">
                 <ScreenHeader id="home-header" title="Currently built images"/>
                 <Table images={demo}/>
