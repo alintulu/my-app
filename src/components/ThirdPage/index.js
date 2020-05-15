@@ -3,18 +3,17 @@ import ScreenHeader from '../ScreenHeader';
 import './ThirdPage.css'
 import Gallery from '../Gallery';
 
-//<ScreenHeader title="Plants"/>
-//<Gallery elements={students}/>
 
 const ThirdPage = ({demo}) => {
-    console.log("Reducer third page is ", {demo})
-
+    const images = {demo}.demo.elements.images;
+    console.log("Reducer third page is ", {images})
+    console.log("Hey Clemens")
     return (
         <div className="Home">
             <div className="Background"></div>
             <div className="Home-text">
             <ScreenHeader id="home-header" title="Find your image"/>
-            <Gallery elements={demo}/>
+            <Gallery images={images} />
          </div>
         </div>
         );

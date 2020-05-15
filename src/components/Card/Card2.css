@@ -1,0 +1,33 @@
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .Card {
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+    margin: 20px auto;
+    overflow: hidden;
+    position: absolute;
+    width: 150px;  
+  }
+  
+  
+  .Card > div {
+    color: green;
+    display: block;
+    height: 40px;
+    position: relative;
+    transition: .2s;
+    width: 150px;
+    
+  }
+
+  .Card:hover {
+    transition: all .2s ease;
+    height: 200px;
+   }

@@ -9,19 +9,32 @@ import * as serviceWorker from './serviceWorker';
 import { combineReducers } from 'redux'
 import 'semantic-ui-css/semantic.min.css';
 
-const elements = {
-  images: [
-    { id: 1, name: 'CMSSW_10_6_8_patch1', tag: '2020-02-19-df153472', createdAt: '2020-02-19'},
-    { id: 2, name: 'CMSSW_10_6_8_patch1', tag: '2020-05-12-cdf5c9a1', createdAt: '2020-05-12'},
-    { id: 3, name: 'CMSSW_7_1_25_patch5', tag: '2020-02-13-899c1373', createdAt: '2020-02-13'},
-    { id: 4, name: 'CMSSW_7_1_25_patch5', tag: '2020-02-18-847c8252', createdAt: '2020-02-18'},
-    { id: 5, name: 'CMSSW_9_2_1', tag: '2020-02-19-df153472', createdAt: '2020-02-19'},
-    { id: 6, name: 'CMSSW_9_3_9', tag: '2020-02-19-5e7c8abc', createdAt: '2020-02-19'},
-  ]
+import elements from './data/images.json';
+import releases from './data/cmssw_releases.json';
+
+const initialState = {
+  elements: elements,
+  releases: releases
 }
 
-const myReducer = (state = elements, action) => {
+const myDemoReducer = (state = initialState, action) => {
   switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+const defaultDownShift = {
+  chosen_release: ""
+};
+
+const DownShiftReducer = (state = defaultDownShift, action) => {
+  const new_chosen_release = action.chosen_release;
+  switch (action.type) {
+    case 'CHANGE':
+      return {
+        chosen_release: new_chosen_release
+      }
     default:
       return state;
   }
@@ -29,7 +42,8 @@ const myReducer = (state = elements, action) => {
 
 const store = createStore(
   combineReducers({
-    demo: myReducer
+    demo: myDemoReducer,
+    downShift: DownShiftReducer
   })
 );
 

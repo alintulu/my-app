@@ -3,8 +3,8 @@ import SecondPage from '../components/SecondPage'
 
 const mapStateToProps = (state) => {
   return {
-    details: state.details,
-    demo: state.demo
+    demo: state.demo,
+    downShift: state.downShift
   }
 }
 

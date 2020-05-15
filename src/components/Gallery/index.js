@@ -17,9 +17,9 @@ class EditableGallery extends Component {
   }
 
   render() {
-    const {elements} = this.props;
+    //const {elements} = this.props;
     const {search} = this.state;
-    const filteredElements = {elements}.elements.images.filter(element => element.name.toLowerCase().includes(search));
+    const filteredElements = this.props.images.filter(element => element.name.toLowerCase().includes(search));
     console.log("Hey look here", {filteredElements})
     return (
       <div>
@@ -32,8 +32,9 @@ class EditableGallery extends Component {
         <div className="Elements">
           {
             filteredElements.map(element => {
+              console.log({element}.element);
               return  <span key={element.id} className="Element">
-                        <Card name={element.name}/>
+                        <Card name={element.name} text={["docker pull ", {element}.element.pull]}/>
                       </span>
             })
           }

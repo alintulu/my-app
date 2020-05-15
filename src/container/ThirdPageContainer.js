@@ -3,7 +3,6 @@ import ThirdPage from '../components/ThirdPage'
 
 const mapStateToProps = (state) => {
   return {
-    details: state.details,
     demo: state.demo
   }
 }
