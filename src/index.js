@@ -40,10 +40,46 @@ const DownShiftReducer = (state = defaultDownShift, action) => {
   }
 }
 
+const initalBuildImageState = {
+  image: "",
+  scram_arch: "",
+  compatible_scram_arch: {
+    release: "",
+    scram_archs: []
+  }
+};
+
+const BuildImageReducer = (state = initalBuildImageState, action) => {
+  const request_image = action.request_image;
+  const request_scram_arch = action.request_scram_arch;
+  const scram_arch_list = action.scram_arch_list;
+  switch (action.type) {
+    case 'REQUEST_IMAGE':
+      return {
+        ...state,
+        image: request_image,
+        scram_arch: ""
+      }
+    case 'REQUEST_SCRAM_ARCH':
+      return {
+        ...state,
+        scram_arch: request_scram_arch
+      }
+    case 'CREATE_SCRAM_ARCH_LIST':
+      return {
+        ...state,
+        compatible_scram_arch: scram_arch_list
+      }
+    default:
+      return state;
+  }
+}
+
 const store = createStore(
   combineReducers({
     demo: myDemoReducer,
-    downShift: DownShiftReducer
+    downShift: DownShiftReducer,
+    buildImage: BuildImageReducer
   })
 );
 

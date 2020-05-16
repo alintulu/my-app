@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
   }),
 );
 
-const ComboBox = (props) => {
+const ComboBox2 = (props) => {
 
   const onChange = (selected, kind) => {
 
@@ -61,7 +61,7 @@ const ComboBox = (props) => {
         onChange={(event, value) => onChange(value, props.kind)}
         id={props.text}
         options={props.books}
-        getOptionLabel={(option) => option.release}
+        getOptionLabel={(option) => option.scram_arch}
         style={{ width: 300 }}
         renderInput={(params) => <TextField 
             {...params} 
@@ -84,7 +84,7 @@ const ComboBox = (props) => {
   const DownShiftContainer = connect(
     mapStateToProps,
     null
-  )(ComboBox)
+  )(ComboBox2)
   
   export default DownShiftContainer
   

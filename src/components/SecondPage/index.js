@@ -8,6 +8,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 import MyForm from '../Form';
 import DropDown from '../DropDown';
 import ComboBox from '../DownShift';
+import ComboBox2 from '../DownShift2';
 
 //<Table images={demo}/>
 //<MyForm />
@@ -35,10 +36,14 @@ const books2 = [
 ];
 
 const SecondPage = (props) => {
-    const demo = props.demo;
 
-    const releases = {demo}.demo.releases.map(r => { return r });
-    console.log("Props areee", props.demo.elements.images);
+    const releases = props.demo.releases;
+    const compatible_scram_archs = props.buildImage.compatible_scram_arch.scram_archs.map( c => {
+        var info =  {
+            scram_arch: c
+        }
+        return info;
+    })
 
     return (
         
@@ -46,12 +51,17 @@ const SecondPage = (props) => {
             <div className="Background"></div>
             <div className="Home-text">
                 <ScreenHeader id="home-header" title="Request an image"/>
+                <p>Start by choosing a CMSSW release. You have chosen</p>
+                <p className="Chosen-text">{props.buildImage.image === "" ? "None" : props.buildImage.image}</p>
+                <p>Next choose the SCRAM ARCH version. You have chosen</p>
+                <p className="Chosen-text">{props.buildImage.scram_arch === "" ? "None" : props.buildImage.scram_arch}</p>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 }}>
-                <ComboBox books={releases} />
+                <ComboBox books={releases} kind="release" text="CMSSW releases"/>
+                <ComboBox2 books={compatible_scram_archs} kind="scram_arch" text="SCRAM ARCH versions"/>
             </div>
             </div>
         </div>

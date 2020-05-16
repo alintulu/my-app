@@ -21,3 +21,7 @@
     filter: brightness(30%);
     -webkit-filter: brightness(30%);
   }
+
+  .Chosen-text {
+    color: red;
+  }

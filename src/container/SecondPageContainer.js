@@ -4,7 +4,8 @@ import SecondPage from '../components/SecondPage'
 const mapStateToProps = (state) => {
   return {
     demo: state.demo,
-    downShift: state.downShift
+    downShift: state.downShift,
+    buildImage: state.buildImage
   }
 }
 
