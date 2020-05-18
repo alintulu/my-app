@@ -31,42 +31,29 @@ const ThirdPage = ({demo}) => {
     const columns = useMemo(
         () => [
           {
-            Header: "Image",
-            columns: [
-              {
-                Header: "Name",
-                accessor: "name"
-              },
-              {
-                Header: "Tag",
-                accessor: "tag"
-              }
-            ]
+            Header: "Name",
+            accessor: "name"
           },
           {
-            Header: "Details",
-            columns: [
-              {
-                Header: "Pull URL",
-                accessor: "url",
-                Cell: ({ cell: { value } }) => <CodeBox text={["docker pull", "gitlab-registry.cern.ch/alintulu/cmssw-docker-ci/cmssw:CMSSW_10_6_8_patch1-2020-02-19-df153472", "   !"]}/>
-              },
-              {
-                Header: "Status",
-                accessor: "status",
-                Cell: ({ cell: { value } }) => <span className="badge">{value}</span>
-              },
-              {
-                Header: "Created At",
-                accessor: "createdAt"
-              }
-            ]
+            Header: "Tag",
+            accessor: "tag"
+          },
+         {
+            Header: "Pull URL",
+            accessor: "url",
+            Cell: ({ cell: { value } }) => <CodeBox text={["docker pull", value]}/>
+          },
+          {
+            Header: "Status",
+            accessor: "status",
+            Cell: ({ cell: { value } }) => <span className="badge">{value}</span>
+          },
+          {
+            Header: "Created At",
+            accessor: "createdAt"
           }
         ],
-        []
       );
-
-    //<Table2 columns={columns} data={data} />
 
     console.log(fake);
 
@@ -74,8 +61,8 @@ const ThirdPage = ({demo}) => {
         <div className="Home">
             <div className="Background"></div>
             <div className="Home-text">
-            <ScreenHeader id="home-header" title="Find your image"/>
-            <Table2 columns={columns} data={fake} />
+            <h1 className="Screen-title">Status Board</h1>
+            <Table2 columns={columns} data={fake}/>
             </div>
         </div>
     )

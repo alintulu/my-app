@@ -3,21 +3,8 @@ import TextField from '@material-ui/core/TextField';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { connect } from 'react-redux';
-import './DownShift.css';
+require('./DownShift.css');
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {
-        width: 500,
-        '& > * + *': {
-            marginTop: theme.spacing(2),
-        },
-        "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: "red"
-        },
-    },
-  }),
-);
 
 const ComboBox = (props) => {
 
@@ -48,26 +35,20 @@ const ComboBox = (props) => {
     }
   };
 
-  const classes = useStyles();
   console.log("books" , props.buildImage);
 
   return (
-      <div className={classes.root}>
-      <Autocomplete style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        }}
+      <div>
+      <Autocomplete 
         onChange={(event, value) => onChange(value, props.kind)}
         id={props.text}
         options={props.books}
         getOptionLabel={(option) => option.release}
-        style={{ width: 300 }}
+        style={{ width: 400, height: 100}}
         renderInput={(params) => <TextField 
             {...params} 
             label={props.text}
             margin="normal"
-            className={classes.inputRoot}
             fullWidth />}
         />
         </div>

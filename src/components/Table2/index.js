@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTable, useFilters, useSortBy } from "react-table";
-//import '../Table2.css';
+import TableScrollbar from 'react-table-scrollbar';
+import './Table2.css';
 
 export default function Table({ columns, data }) {
   const [filterInput, setFilterInput] = useState("");
@@ -30,26 +31,21 @@ export default function Table({ columns, data }) {
   // Render the UI for your table
   return (
     <>
+      <p>
       <input
         value={filterInput}
         onChange={handleFilterChange}
         placeholder={"Search name.."}
       />
-      <table {...getTableProps()}>
+      </p>
+      <TableScrollbar height="600px">
+      <table
+        {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
-                <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                  className={
-                    column.isSorted
-                      ? column.isSortedDesc
-                        ? "sort-desc"
-                        : "sort-asc"
-                      : ""
-                  }
-                >
+                <th>
                   {column.render("Header")}
                 </th>
               ))}
@@ -72,6 +68,7 @@ export default function Table({ columns, data }) {
           })}
         </tbody>
       </table>
+      </TableScrollbar>
     </>
   );
 }

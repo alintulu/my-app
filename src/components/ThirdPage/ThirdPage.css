@@ -21,3 +21,15 @@
     filter: brightness(30%);
     -webkit-filter: brightness(30%);
   }
+
+  .Screen-header {
+    padding: 20px;
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 200px;
+    top: 0;
+  }
+  
+  .Screen-title {
+    font-size: 2.5em;
+  }

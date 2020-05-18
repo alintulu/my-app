@@ -9,7 +9,7 @@ const Dashboard = ({details, demo}) => {
       <div className="Background"></div>
       <div className="Home-text">
         <img src={logo} className="App-logo" alt="logo" />
-        <ScreenHeader id="home-header" title="Service for CMSSW Docker image building"/>
+        <h1 className="Screen-title">Service for CMSSW Docker image building</h1>
         <p>Build your CMS docker images!</p>
       </div>
     </div>

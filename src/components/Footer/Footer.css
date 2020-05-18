@@ -8,6 +8,10 @@
     height: 60px;
     color: gray;
     background-color: #f5ecec;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .links > a {

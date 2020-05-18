@@ -22,6 +22,14 @@
     -webkit-filter: brightness(30%);
   }
 
+  .Screen-header {
+    padding: 20px;
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 300px;
+    top: 0;
+  }
+
   .App-logo {
     padding-top: 100px;
     height: 400px;

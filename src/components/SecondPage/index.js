@@ -19,22 +19,6 @@ import ComboBox2 from '../DownShift2';
 //<DropDown books={books2} text="Search SCRAM versions.." cmssw={false}/>
 //</div>
 
-const books = [
-    { name: "Harry Potter" },
-    { name: "Net Moves" },
-    { name: "Half of a yellow sun" },
-    { name: "The Da Vinci Code" },
-    { name: "Born a crime" }
-];
-  
-const books2 = [
-    { name: "Harry Potter2" },
-    { name: "Net Moves2" },
-    { name: "Half of a yellow sun2" },
-    { name: "The Da Vinci Code2" },
-    { name: "Born a crime2" }
-];
-
 const SecondPage = (props) => {
 
     const releases = props.demo.releases;
@@ -49,21 +33,36 @@ const SecondPage = (props) => {
         
         <div className="Home">
             <div className="Background"></div>
-            <div className="Home-text">
-                <ScreenHeader id="home-header" title="Request an image"/>
-                <p>Start by choosing a CMSSW release. You have chosen</p>
-                <p className="Chosen-text">{props.buildImage.image === "" ? "None" : props.buildImage.image}</p>
-                <p>Next choose the SCRAM ARCH version. You have chosen</p>
-                <p className="Chosen-text">{props.buildImage.scram_arch === "" ? "None" : props.buildImage.scram_arch}</p>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                }}>
-                <ComboBox books={releases} kind="release" text="CMSSW releases"/>
-                <ComboBox2 books={compatible_scram_archs} kind="scram_arch" text="SCRAM ARCH versions"/>
-            </div>
-            </div>
+                <div className="Home-text">
+                    <ScreenHeader id="home-header" title="Request an image"/>
+                </div>
+                
+                <div class="split left">
+                    <div class="centered">
+                        <div style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        }}>
+                            <p className="Page-text">1. Start by choosing a CMSSW release. You have chosen</p>
+                            <p className="Chosen-text">{props.buildImage.image === "" ? "None" : props.buildImage.image}</p>
+                            <p className="Page-text">2. Choose the SCRAM ARCH version. You have chosen</p>
+                            <p className="Chosen-text">{props.buildImage.scram_arch === "" ? "None" : props.buildImage.scram_arch}</p>
+                        </div>
+                    </div>
+                </div>
+  
+
+                <div class="split right">
+                    <div class="centered">
+                        <div style={{
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            }}>
+                            <p><ComboBox books={releases} kind="release" text="CMSSW releases"/></p>
+                            <p> <ComboBox2 books={compatible_scram_archs} kind="scram_arch" text="SCRAM ARCH versions"/></p>
+                        </div>
+                    </div>
+                </div> 
         </div>
     );
 }

@@ -62,7 +62,7 @@ const ComboBox2 = (props) => {
         id={props.text}
         options={props.books}
         getOptionLabel={(option) => option.scram_arch}
-        style={{ width: 300 }}
+        style={{ width: 400, height: 100}}
         renderInput={(params) => <TextField 
             {...params} 
             label={props.text}
