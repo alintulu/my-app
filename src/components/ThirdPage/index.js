@@ -46,7 +46,7 @@ const ThirdPage = ({demo}) => {
          {
             Header: "Pull URL",
             accessor: "url",
-            Cell: ({ cell: { value } }) => <CodeBox text={["docker pull", value]}/>
+            Cell: ({ cell: { value } }) => <CodeBox text={["docker pull ", value]}/>
           },
           {
             Header: "Status",

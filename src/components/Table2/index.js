@@ -12,7 +12,8 @@ export default function Table({ columns, data }) {
     headerGroups,
     rows,
     prepareRow,
-    setFilter
+    setFilter,
+    setAllFilters
   } = useTable(
     {
       columns,
