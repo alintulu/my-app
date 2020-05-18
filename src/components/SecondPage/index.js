@@ -47,6 +47,7 @@ const SecondPage = (props) => {
                             <p className="Chosen-text">{props.buildImage.image === "" ? "None" : props.buildImage.image}</p>
                             <p className="Page-text">2. Choose the SCRAM ARCH version. You have chosen</p>
                             <p className="Chosen-text">{props.buildImage.scram_arch === "" ? "None" : props.buildImage.scram_arch}</p>
+                            <p><button class="button">Make request</button></p>
                         </div>
                     </div>
                 </div>
