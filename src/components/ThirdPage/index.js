@@ -26,6 +26,11 @@ const ThirdPage = ({demo}) => {
     console.log("Reducer third page is ", {images})
     console.log("Hey Clemens")
 
+    const bkg_colours = {
+      "done": "#9ae6b4",
+      "building": "#9abbe6"
+    }
+
     const backgroundColor = "blue";
 
     const columns = useMemo(
@@ -46,7 +51,7 @@ const ThirdPage = ({demo}) => {
           {
             Header: "Status",
             accessor: "status",
-            Cell: ({ cell: { value } }) => <span className="badge">{value}</span>
+            Cell: ({ cell: { value } }) => <span className="badge" style = {{ backgroundColor: bkg_colours[value] }}>{value}</span>
           },
           {
             Header: "Created At",
