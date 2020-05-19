@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.e4b4022f.chunk.css",
-    "main.js": "/my-app/static/js/main.0b6485b3.chunk.js",
-    "main.js.map": "/my-app/static/js/main.0b6485b3.chunk.js.map",
+    "main.css": "/my-app/static/css/main.a26aed2b.chunk.css",
+    "main.js": "/my-app/static/js/main.be94b278.chunk.js",
+    "main.js.map": "/my-app/static/js/main.be94b278.chunk.js.map",
     "runtime-main.js": "/my-app/static/js/runtime-main.f5212b54.js",
     "runtime-main.js.map": "/my-app/static/js/runtime-main.f5212b54.js.map",
-    "static/css/2.f8946dd2.chunk.css": "/my-app/static/css/2.f8946dd2.chunk.css",
-    "static/js/2.10f7fea3.chunk.js": "/my-app/static/js/2.10f7fea3.chunk.js",
-    "static/js/2.10f7fea3.chunk.js.map": "/my-app/static/js/2.10f7fea3.chunk.js.map",
+    "static/css/2.a6c9db65.chunk.css": "/my-app/static/css/2.a6c9db65.chunk.css",
+    "static/js/2.f885a02a.chunk.js": "/my-app/static/js/2.f885a02a.chunk.js",
+    "static/js/2.f885a02a.chunk.js.map": "/my-app/static/js/2.f885a02a.chunk.js.map",
     "index.html": "/my-app/index.html",
-    "precache-manifest.a5de7f35c251e0edcbdadffabae9c6ad.js": "/my-app/precache-manifest.a5de7f35c251e0edcbdadffabae9c6ad.js",
+    "precache-manifest.68edf3ee72b0e5e7a45bd80e4170757c.js": "/my-app/precache-manifest.68edf3ee72b0e5e7a45bd80e4170757c.js",
     "service-worker.js": "/my-app/service-worker.js",
-    "static/css/2.f8946dd2.chunk.css.map": "/my-app/static/css/2.f8946dd2.chunk.css.map",
-    "static/css/main.e4b4022f.chunk.css.map": "/my-app/static/css/main.e4b4022f.chunk.css.map",
-    "static/js/2.10f7fea3.chunk.js.LICENSE.txt": "/my-app/static/js/2.10f7fea3.chunk.js.LICENSE.txt",
+    "static/css/2.a6c9db65.chunk.css.map": "/my-app/static/css/2.a6c9db65.chunk.css.map",
+    "static/css/main.a26aed2b.chunk.css.map": "/my-app/static/css/main.a26aed2b.chunk.css.map",
+    "static/js/2.f885a02a.chunk.js.LICENSE.txt": "/my-app/static/js/2.f885a02a.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/my-app/static/media/outline-icons.ef60a4f6.woff",
     "static/media/cms-logo.png": "/my-app/static/media/cms-logo.9ce63631.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f5212b54.js",
-    "static/css/2.f8946dd2.chunk.css",
-    "static/js/2.10f7fea3.chunk.js",
-    "static/css/main.e4b4022f.chunk.css",
-    "static/js/main.0b6485b3.chunk.js"
+    "static/css/2.a6c9db65.chunk.css",
+    "static/js/2.f885a02a.chunk.js",
+    "static/css/main.a26aed2b.chunk.css",
+    "static/js/main.be94b278.chunk.js"
   ]
 }
