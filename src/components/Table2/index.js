@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTable, useFilters, useSortBy } from "react-table";
 import TableScrollbar from 'react-table-scrollbar';
 import './Table2.css';
+import RadioButtons from '../RadioButtons';
 
 export default function Table({ columns, data }) {
   const [filterInput, setFilterInput] = useState("");
@@ -33,13 +34,14 @@ export default function Table({ columns, data }) {
   return (
     <>
       <p>
-      <input
+
+      <input className="search"
         value={filterInput}
         onChange={handleFilterChange}
-        placeholder={"Search name.."}
-      />
+        placeholder={"Search image name.."}
+      /> 
       </p>
-      <TableScrollbar height="600px">
+      <TableScrollbar height="550px">
       <table
         {...getTableProps()}>
         <thead>
@@ -61,7 +63,7 @@ export default function Table({ columns, data }) {
                 {row.cells.map(cell => {
                   console.log("Cell is", cell.column.Header)
                   return (
-                    <td style={{ background: cell.column.Header === "Pull URL" ? "#f5ecec" : null }} {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td style={{ background: cell.column.Header === "Docker Pull" ? "#f5ecec" : null }} {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   );
                 })}
               </tr>

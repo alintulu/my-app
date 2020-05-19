@@ -12,6 +12,10 @@ import 'semantic-ui-css/semantic.min.css';
 import elements from './data/images.json';
 import releases from './data/cmssw_releases.json';
 
+import fake from './data/fake.json';
+import fake2 from './data/fake2.json';
+import fake3 from './data/fak3.json';
+
 const initialState = {
   elements: elements,
   releases: releases
@@ -19,6 +23,35 @@ const initialState = {
 
 const myDemoReducer = (state = initialState, action) => {
   switch (action.type) {
+    default:
+      return state;
+  }
+}
+
+const defaultTable = {
+  available: fake,
+  building: fake2,
+  pending: fake3
+}
+
+const TableReducer = (state = defaultTable, action) => {
+  switch(action.type){
+    default:
+      return state;
+  }
+}
+
+const defaultShow = {
+  show: fake
+}
+
+const ShowReducer = (state = defaultShow, action) => {
+  const new_show = action.show;
+  switch(action.type){
+    case 'SHOW':
+      return {
+        show: new_show
+      }
     default:
       return state;
   }
@@ -79,7 +112,9 @@ const store = createStore(
   combineReducers({
     demo: myDemoReducer,
     downShift: DownShiftReducer,
-    buildImage: BuildImageReducer
+    buildImage: BuildImageReducer,
+    table: TableReducer,
+    show: ShowReducer
   })
 );
 

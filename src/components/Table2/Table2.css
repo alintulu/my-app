@@ -38,3 +38,7 @@ table th {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.search {
+  border-left: 0;
+}

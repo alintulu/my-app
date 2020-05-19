@@ -22,6 +22,11 @@
     -webkit-filter: brightness(30%);
   }
 
+  .Radio {
+    padding-bottom: 20px;
+    font-size: 15px;
+  }
+
   .Screen-header {
     padding: 20px;
     padding-top: 10px;

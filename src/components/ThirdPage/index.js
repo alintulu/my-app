@@ -5,8 +5,7 @@ import Gallery from '../Gallery';
 import Table2 from '../Table2'
 import '../Table2/Table2.css';
 import CodeBox from '../CodeBox';
-
-import fake from '../../data/fake.json';
+import RadioButtons from '../RadioButtons';
 
 //<Gallery images={images} />
 
@@ -21,7 +20,7 @@ const Genres = ({ values }) => {
     );
   };
 
-const ThirdPage = ({demo}) => {
+const ThirdPage = ({demo, table, show}) => {
     const images = {demo}.demo.elements.images;
     console.log("Reducer third page is ", {images})
     console.log("Hey Clemens")
@@ -44,7 +43,7 @@ const ThirdPage = ({demo}) => {
             accessor: "tag"
           },
          {
-            Header: "Pull URL",
+            Header: "Docker Pull",
             accessor: "url",
             Cell: ({ cell: { value } }) => <CodeBox text={["docker pull ", value]}/>
           },
@@ -60,14 +59,16 @@ const ThirdPage = ({demo}) => {
         ],
       );
 
-    console.log(fake);
+    console.log(show);
+
+    const data = show.show;
 
     return (
         <div className="Home">
             <div className="Background"></div>
             <div className="Home-text">
-            <h1 className="Screen-title">Status Board</h1>
-            <Table2 columns={columns} data={fake}/>
+            <div className="Radio"><RadioButtons/></div>
+            <Table2 columns={columns} data={data}/>
             </div>
         </div>
     )

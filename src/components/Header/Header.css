@@ -22,7 +22,6 @@
   }
   
   .Header-link {
-    float: left;
     text-align: center;
     display: block;
     padding: 10px 16px;
@@ -34,8 +33,18 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
   .active, .Header-link:hover {
     background-size: 80% 2px, auto;
     color: white;
